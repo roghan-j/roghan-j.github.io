@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/85b96b0321.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Haxios</title>
+
+        <script>
+            var countdownDate = new Date("Feb 18, 2023 12:00:00").getTime();
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countdownDate - now;
+    
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+    
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+            }, 1000) 
+
+        </script>
+    </head>
+    <body >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!--front page div-->
+
+        <div class="taskbar">
+            <div class="group-1">
+                <div class="menu">
+                    <div class="line-1 line target"></div>
+                    <div class="line-2 line"></div>
+                    <div class="line-3 line target"></div>
+                </div>
+                <a href="#home" class="logo-name"><img src="./images/ieee.png" class="logo-img"/></a>
+            </div>
+            <div>
+                <img src="./images/vit.png" class="logo-img"/>
+            </div>
+        </div>
+
+        <nav class="navbar target">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#timeline">Countdown</a></li>
+            <li><a class="nav-link" href="#themes">Themes</a></li>
+            <li><a class="nav-link" href="#sponsor">Sponsor</a></li>
+            <li><a class="nav-link" href="#prizes">Prizes</a></li>
+            <li><a class="nav-link" href="#about_us">About Us</a></li>
+        </nav>
+        
+        <!--navbar-->
+        <!-- <nav class="navbar">
+            <div class="container-fluid">
+                <div class="me-auto" style="max-width:10%">
+                    <img src="./images/Stubrlogo.jpg" alt="IEEE Student Branch" style="height:40px;width:40px;">
+                </div>
+                <div class="mx-auto" style="max-width:80%;">
+                    <button type="button" class="button navbtn" onclick="window.location.href='#home';">Home</button>
+                    <button type="button" class="button navbtn" onclick="window.location.href='#timeline';">Timer</button>
+                    <button type="button" class="button navbtn" onclick="window.location.href='#themes';">Themes</button>
+                    <button type="button" class="button navbtn" onclick="window.location.href='#sponsor';">Sponsors</button>
+                    <button type="button" class="button navbtn" onclick="window.location.href='#prizes';">Prizes</button>
+                    <button type="button" class="button navbtn" onclick="window.location.href='#about_us';">About Us</button>
+                </div>
+                <div class="ms-auto" style="max-width:10%">
+                    <img src="./images/hacklogo.jpg" alt="Hackathon" style="height:40px;width:40px;">
+                </div>
+            </div>
+        </nav> -->
+        <!-- navbar ends -->
+        
+        <!-- homepage -->
+        <div class="frontpage" id="home">
+
+            <!-- <img src="./images/page1.jpg" class="back-img"/> -->
+            
+            <!--div containing front page elements-->
+            <div class="content">
+                <!--flexbox to center title and icon-->
+                <div style="display:flex">
+                    <!--div containing title-->
+                    <div class="titleicon">
+                        <!--div to style title-->
+                        <div class="titlebox">
+                            <div style="font-size:150%;float:right">18-19 February</div></br>
+                            <div style="font-size:200%;float:right">HAXIOS</div>
+                        </div>
+                    </div>
+                    <!--div containing icon-->
+                    <div class="titleicon">
+                        <img src="./images/Hack2.svg" alt="Hackicon" style="height:100%;width:50%;max-width:200px;max-height:200px">
+                    </div>
+                </div>
+                <!--div containing hackathon description-->
+                <div class="textb">
+                    <p>We would like to enlighten your minds by providing you an opportunity to show your skills in various technologies. We are providing a platform that endeavours to bring innovation and creativity and build your curiosity, ignite your passion to explore various domains of your interest. Bring your ideas into your own unique projects to solve the given problem and make new connections with other young minds in campus!</p>
+                </div>
+                <!--div containing application button-->
+                <div class="btnapp">
+                    <!--application button-->
+                    <a href="https://www.vitchennaievents.com/conf1/index.php?eventid=1249" class="apply-desc">
+                        <button class="button apply">APPLY NOW</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- homepage ends -->
+
+        <!-- timer -->
+        <div id="timeline" class="main_timer">
+            <h1 class="heading-font-size">We are coming soon</h1>
+            <div class="timer-container">
+                <div class="countdown digits">
+                    <div class="timers remove-left-border">
+                        <p id="days" class="countdown-number">00</p>
+                    </div>
+                    <div class="timers">
+                        <p id="hours" class="countdown-number">00</p>
+                    </div>
+                    <div class="timers">
+                        <p id="minutes" class="countdown-number">00</p>
+                    </div>
+                    <div class="timers remove-right-border">
+                        <p id="seconds" class="countdown-number">00</p>
+                    </div>
+                </div>
+                <div class="countdown words">
+                    <div class="timers black ">
+                        <span><p>Days</p></span>
+                    </div>
+                    <div class="timers black ">
+                        <span><p>Hours</p></span>
+                    </div>
+                    <div class="timers black ">
+                        <span><p>Minutes</p></span>
+                    </div>
+                    <div class="timers black ">
+                        <span><p>Seconds</p></span>
+                    </div>
+                </div>
+            </div>
+            <h1 class="black date">18th February, 2023</h1>
+        </div>
+        <!-- timer ends -->
+
+        <!-- themes -->
+        <div class="themes-container" id="themes">
+            <div class="upper-blend">
+                <div class="r-line"></div>
+                <span class="heading">THEMES</span>
+                <div class="l-line"></div>
+            </div>
+            
+            <div class="bg">
+                <img src="./images/theme-bg.png" class="bg-img" alt="img">
+
+                <div class="theme-div">
+                    <div class="theme-title">Healthcare</div>
+                    <div class="theme-content">
+                        Technology has made a great impact in advancement of medical treatments, providing more efficient care. For example, telemedicine has made it easier for patients to receive medical consulations from the comfort of their homes, this reducing the need for in person visits and better access to healthcare. Electronics Health Records(EHR) have also streamlined the management of patient data, reducing the risk of medical errors and improving patient outcomes. Other technological advancements such as wearable health monitors and AI-powered medical devices are enabling patients to proactively manage their health and receive more personalized care.
+                    </div>
+                </div>
+                <div class="theme-div">
+                    <div class="theme-content">
+                        Technology has changed how clothing is created, produced, and worn in the fashion industry. The adoption of computer-aided design (CAD) has facilitated designers' ability to swiftly and effectively construct complicated patterns, test designs, and make revisions. Consumers may now purchase for clothing from anywhere in the world because to the growth of e-commerce, which has resulted in a wider variety of clothing selections. Additionally, the combination of wearable technology and smart materials has made it possible to design apparel that can track fitness data, change colour, and more. Not only have these innovations altered the fashion sector, but they also hold the promise of significantly enhancing our quality of life.
+                    </div>
+                    <div class="theme-title">Fashion</div>
+                </div>
+            </div>
+            
+            <div class="lower-blend">
+                <div class="theme-div">
+                    <div class="theme-title">Gaming</div>
+                    <div class="theme-content">
+                        Online gaming has seen a tremendous evolution over the years with the advancements in technology. Starting from text-based games to high-graphics games, the graphics quality and game-play has improved greatly. The introduction of cloud gaming has made it possible to play games on any device with an internet connection. The introduction of Virtual Reality and Augmented Reality has brought a whole new level of immersion to online gaming. Multiplayer gaming has become more accessible, with games supporting cross-platform play and offering seamless matchmaking services. The increasing popularity of mobile gaming has also driven the development of mobile gaming technology. With the constant innovation in technology, the future of online gaming looks very promising not only because it fun but also lucurative.
+                    </div>
+                </div>
+                <div class="theme-div">
+                    <div class="theme-content">
+                        Sustainable development and technology go hand in hand as technology can play a crucial role in promoting and supporting sustainable development. Advancements in clean energy technology, such as renewable energy sources, can help reduce the carbon footprint and protect the environment. Smart city technologies, such as energy-efficient buildings and transportation systems, can improve the sustainability of urban areas. The development of digital technologies, such as the Internet of Things, can help increase resource efficiency and reduce waste. The use of technology in agriculture, such as precision agriculture, can help increase food production while reducing the use of harmful chemicals. Technology can also support sustainable development by improving access to education, healthcare, and other essential services. The key is to ensure that the development and use of technology is aligned with the principles of sustainable development
+                    </div>
+                    <div class="theme-title font-change">Sustainable Development Goals</div>
+                </div>
+
+                <!-- sponsors -->
+                <div class="mid" id="sponsor">
+                    <div class="r-line"></div>
+                    <h1 class="sponsor-head">SPONSORS</h1>
+                    <div class="l-line"></div>
+
+                    <div class="sponsor-div">
+                        <img src="./images/ditto-2.png" class="sponsor-img"/>
+                    </div>
+                    <img class="bg-img-2" src="./images/background2-removebg-preview.png" alt="f-img" style="width:100%;"> 
+                </div>
+                <!-- sponsors end -->
+
+            </div>
+        </div>
+        <!-- themes ends -->
+
+        <!-- prizes -->
+        <div class="mid-2" id="prizes">
+            <div class="r-line"></div>
+            <h1 class="prizes-head">PRIZES</h1>
+            <div class="l-line"></div>
+
+            <div class="prize-container">
+                <h class="desc-head">
+                    Join in  for a chance to win a share of our generous prize pool worth over Rs. 15,000! 
+                </h>
+
+                <div class="prize-desc-cont">
+                    <p class="f-p prize-amt">1st place - Rs.10,000</p>
+                    <p class="s-p prize-amt">2nd place - Rs.5,000</p>
+                    <p class="t-p prize-amt">3rd place - Rs.2,500</p>
+                </div>
+                <div class="prizes-end">
+                    <span class="bigger">"</span>But that's not all, participants will also have the opportunity to gain valuable industry experience through our internship programs. <br> Don't miss out on this exciting opportunity to boost your skills and win big!<span class="bigger">"</span>
+                </div>
+
+            </div>
+                    
+            <div class="extra-c">
+                <div class="line-1">
+                    Have a great adventure ahead.<br>
+                </div>
+                <div class="line-2">
+                    Explore and Hack.
+                </div>
+            </div>
+        </div>
+        <!-- prizes end -->
+
+        <!-- footer -->
+        
+        <div class="bg-4">
+            <div class="black-scr" id="about_us">
+
+                <div class="foot-row">
+                    <div class="ele">
+                        <h3 class="head-txt">FOLLOW US</h3>
+                        <div class="fu-div">
+                            <a href="https://www.linkedin.com/in/ieee-student-branch-vit-chennai-304b59177/"><img class="fu icon" src="./images/linkedin.svg" alt="img"></a>
+                            <a href="https://www.instagram.com/ieeesbvitcc/?hl=en"><img class="fu icon" src="./images/instagram.svg" alt="img"></a>
+                        </div>
+                    </div>
+
+                    <div class="ele">
+                        <h3 class="head-txt">CONTACT US</h3>
+                        <div>
+                            <i class="fa-solid fa-envelope fa-xl icon"></i>
+                            <span class="con txt"> ieeecc@vit.ac.in</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gap"></div>
+                
+                <div class="foot-row">
+                    <div class="ele">
+                        <h3 class="head-txt">Location</h3>
+                        <p class="add txt">Vandalur – Kelambakkam Rd</p>
+                        <p class="add txt">Chennai – 600 127</p>
+                    </div>
+
+                    <div class="ele">
+                        <h3 class="head-txt">Student Co-ordinator</h3>
+                        <p class="sc txt">Name: Siddharth Ramanathan</p>
+                        <p class="sc txt">Phone no.: 9940118319</p>
+                    </div>
+                </div>
+                
+                <div class="gap"></div>
+
+                <p class="club-name">IEEE STUDENT BRANCH 2023</p>
+            </div>
+
+            <img class="bg-img-4" src="./images/dog.png" alt="f-img">
+        </div>
+        <!-- footer ends -->
+        <script src="./script.js"></script>
+    </body>
+</html>

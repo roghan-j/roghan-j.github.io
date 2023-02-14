@@ -1,0 +1,18 @@
+<div class="bg-3">
+                <img class="bg-img-3" src="./images/background1-removebg-preview.png" alt="f-img">
+                <!-- <h1>PRIZES</h1> -->
+                <div class="boxes">
+                    <div class="rows">
+                        <div class="B1 box"></div>
+                        <div class="B2 box"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="B3 box"></div>
+                        <div class="B4 box"></div>
+                    </div>
+                    <div class="rows">
+                        <div class="B5 box"></div>
+                        <div class="B6 box"></div>
+                    </div>
+                </div>
+            </div>
